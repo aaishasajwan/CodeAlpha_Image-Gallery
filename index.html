@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Gallery</div>
+        <div class="sort-options">
+            <select id="sortSelect">
+                <option value="date">Sort by Date</option>
+                <option value="name">Sort by Name</option>
+                <option value="size">Sort by Size</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Categories</h3>
+            <ul class="category-list">
+                <li class="active" data-category="all">All Images</li>
+                <li data-category="sunsets">Sunsets</li>
+                <li data-category="cats">Cats</li>
+                <li data-category="food">Food</li>
+                <li data-category="sketches">Drawing Sketches</li>
+                <li data-category="favorites">Favorites</li>
+            </ul>
+        </div>
+
+        <div class="gallery-container">
+            <div class="gallery" id="gallery"></div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="">
+            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">‹</button>
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">›</button>
+            <button class="lightbox-close" onclick="closeLightbox()">×</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
